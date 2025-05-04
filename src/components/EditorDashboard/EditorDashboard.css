@@ -1,0 +1,57 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background-color: #E5E7EB;
+  overflow: hidden;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 34px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stats-container > div {
+  flex: 1;
+  max-width: 300px;
+}
+
+@media (max-width: 991px) {
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .dashboard-content {
+    padding: 20px;
+    height: auto;
+    overflow-y: visible;
+  }
+  
+  .stats-container {
+    flex-direction: column;
+  }
+  
+  .stats-container > div {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-content {
+    padding: 10px;
+  }
+}
