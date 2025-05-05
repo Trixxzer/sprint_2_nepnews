@@ -1,0 +1,159 @@
+.drafts-page {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Added to center content */
+}
+
+.stats-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px; /* Added max-width for centering */
+}
+
+.editor-container {
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 34px;
+  width: 100%;
+  max-width: 1100px; /* Added max-width for centering */
+  padding-bottom: 30px;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.editor-header {
+  background-color: #f9fafb;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  padding: 24px;
+  font-size: 18px;
+  color: #1f2937;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.editor-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.article-form {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto; /* Changed to center the form */
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #f9fafb;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  justify-content: center; /* Changed from flex-start to center */
+}
+
+.save-draft-btn,
+.submit-review-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+.save-draft-btn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.save-draft-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.submit-review-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.submit-review-btn:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 991px) {
+  .stats-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .editor-container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  .editor-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .article-form {
+    padding: 20px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    align-items: center; /* Changed from flex-start to center */
+  }
+  
+  .save-draft-btn,
+  .submit-review-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
